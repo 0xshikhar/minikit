@@ -1,6 +1,8 @@
 import { PayBlock } from "@/components/Pay";
-import { SignIn } from "@/components/SignIn";
+// import { SignIn } from "@/components/SignIn";
 import { VerifyBlock } from "@/components/Verify";
+import { useSession } from "next-auth/react";
+import { SignIn } from "@/components/sign-in";
 
 export default function Home() {
   return (

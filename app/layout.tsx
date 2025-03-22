@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 import NextAuthProvider from "@/components/next-auth-provider";
 
 const inter = Inter({ subsets: ["latin"] });
+require('dotenv').config();
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,6 +24,11 @@ export default function RootLayout({
       ssr: false,
     }
   );
+
+  console.log("WLD_CLIENT_ID", process.env.WLD_CLIENT_ID);
+  console.log("WLD_CLIENT_SECRET", process.env.WLD_CLIENT_SECRET);
+  console.log("NEXTAUTH_SECRET", process.env.NEXTAUTH_SECRET);
+
   return (
     <html lang="en">
       <body className={inter.className}>
